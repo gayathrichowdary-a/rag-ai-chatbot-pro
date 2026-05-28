@@ -123,7 +123,7 @@ html, body, [class*="css"]{
 }
 
 [data-testid="stAppViewContainer"] {
-    background-color: #0b1120 !important;
+    background-color: #ffffff !important;
 }          
 
 </style>
