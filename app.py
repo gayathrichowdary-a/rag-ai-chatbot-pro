@@ -119,11 +119,11 @@ html, body, [class*="css"]{
     color:white;
 }
   .main {
-    background-color: #0b1120 !important;
+    background-color: #ffffff !important;
 }
 
 [data-testid="stAppViewContainer"] {
-    background-color: #ffffff !important;
+    background-color: #0b1120 !important;
 }          
 
 </style>
