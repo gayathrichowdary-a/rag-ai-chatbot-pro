@@ -9,12 +9,12 @@ import numpy as np
 from langchain_community.document_loaders import PyMuPDFLoader
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
-from langchain.retrievers import EnsembleRetriever
 from langchain_community.retrievers import BM25Retriever
 from langchain.schema import Document
 from sentence_transformers import CrossEncoder
 from langchain_groq import ChatGroq
 from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain.retrievers import MergerRetriever
 
 from streamlit_pdf_viewer import pdf_viewer
 
@@ -381,10 +381,11 @@ if uploaded_files:
 
     bm25.k = 12
 
-    st.session_state.retriever = EnsembleRetriever(
-        retrievers=[faiss, bm25],
-        weights=[0.7, 0.3]
-    )
+    from langchain.retrievers import MergerRetriever
+
+    st.session_state.retriever = MergerRetriever(
+    retrievers=[faiss, bm25]
+)
 
     st.success(f"✅ Loaded Successfully: {len(chunks)} chunks")
 
