@@ -47,7 +47,7 @@ html, body, [class*="css"]{
 }
 
 .main{
-    background-color:#0b1120;
+    background-color:#f8fac;
 }
 
 .block-container{
@@ -81,7 +81,7 @@ html, body, [class*="css"]{
 }
 
 [data-testid="stSidebar"]{
-    background:#111827;
+    background:#f8fafc;
     border-right:1px solid #1f2937;
 }
 
@@ -100,7 +100,7 @@ html, body, [class*="css"]{
 }
 
 .chat-ai{
-    background:#0f172a;
+    background:#f1f5f9;
     padding:16px;
     border-radius:18px;
     color:#f3f4f6;
