@@ -44,12 +44,10 @@ st.markdown("""
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
-/* ── BASE ── */
 html, body, [class*="css"] {
     font-family: 'Inter', sans-serif;
 }
 
-/* ── MAIN BACKGROUND ── */
 .main,
 [data-testid="stAppViewContainer"],
 [data-testid="stMain"],
@@ -62,7 +60,6 @@ html, body, [class*="css"] {
     padding: 1.5rem 2rem 4rem 2rem !important;
 }
 
-/* ── HEADER ── */
 .title {
     text-align: center;
     font-size: 48px;
@@ -83,9 +80,8 @@ html, body, [class*="css"] {
     letter-spacing: 0.3px;
 }
 
-/* ── SIDEBAR ── */
 [data-testid="stSidebar"] {
-    background: #f1f5f9 !important;
+    background: #f8fafc !important;
     border-right: 1px solid #e2e8f0 !important;
 }
 
@@ -93,7 +89,6 @@ html, body, [class*="css"] {
     color: #1e293b !important;
 }
 
-/* ── TABS ── */
 [data-testid="stTabs"] button {
     color: #64748b !important;
     font-weight: 500;
@@ -101,19 +96,17 @@ html, body, [class*="css"] {
 }
 
 [data-testid="stTabs"] button[aria-selected="true"] {
-    color: #38bdf8 !important;
-    border-bottom: 2px solid #38bdf8 !important;
+    color: #2563eb !important;
+    border-bottom: 2px solid #2563eb !important;
 }
 
-/* ── FILE UPLOADER ── */
 [data-testid="stFileUploader"] {
-    background: #0d1323 !important;
-    border: 1.5px dashed #1e3a5f !important;
+    background: #f8fafc !important;
+    border: 1.5px dashed #cbd5e1 !important;
     border-radius: 14px !important;
     padding: 8px !important;
 }
 
-/* ── USER CHAT BUBBLE ── */
 .chat-user {
     background: linear-gradient(135deg, #2563eb, #1d4ed8);
     padding: 14px 18px;
@@ -121,106 +114,78 @@ html, body, [class*="css"] {
     color: white;
     font-size: 15px;
     line-height: 1.6;
-    margin: 16px 0 16px auto;
-    width: fit-content;
+    margin: 12px 0 12px auto;
     max-width: 75%;
-    box-shadow: 0 4px 20px rgba(37,99,235,0.3);
+    width: fit-content;
+    box-shadow: 0 4px 12px rgba(37,99,235,0.25);
 }
-/* ── AI CHAT BUBBLE ── */
+
 .chat-ai {
     background: #f1f5f9;
-    color: #1e293b;         /* dark text so it's readable on white */
+    padding: 16px 20px;
+    border-radius: 20px 20px 20px 4px;
+    color: #1e293b;
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 12px auto 12px 0;
+    max-width: 80%;
+    width: fit-content;
     border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
 [data-testid="stChatMessage"] {
-    background: #f8fafc !important;
-    border: 1px solid #e2e8f0 !important;
-    color: #1e293b !important;
+    display: none !important;
 }
 
-[data-testid="stChatMessage"] p,
-[data-testid="stChatMessage"] span,
-[data-testid="stChatMessage"] div {
-    color: #1e293b !important;  /* dark text on white bg */
-}
-            
-/* ── STREAMLIT CHAT MESSAGE ── */
-[data-testid="stChatMessage"] {
-    background: #111c30 !important;
-    border: 1px solid #1e3a5f !important;
-    border-radius: 16px !important;
-    padding: 14px 18px !important;
-    margin: 10px 0 !important;
-    color: #e2e8f0 !important;
-    box-shadow: 0 2px 16px rgba(0,0,0,0.3) !important;
-}
-
-[data-testid="stChatMessage"] p,
-[data-testid="stChatMessage"] span,
-[data-testid="stChatMessage"] div {
-    color: #e2e8f0 !important;
-}
-
-/* ── CHAT INPUT ── */
 [data-testid="stChatInput"] {
-    background: #0d1323 !important;
-    border: 1.5px solid #1e3a5f !important;
+    background: #f8fafc !important;
+    border: 1.5px solid #e2e8f0 !important;
     border-radius: 14px !important;
-    color: #e2e8f0 !important;
 }
 
 [data-testid="stChatInput"] textarea {
-    color: #e2e8f0 !important;
+    color: #1e293b !important;
     background: transparent !important;
 }
 
-/* ── BUTTONS ── */
 [data-testid="stButton"] button {
-    background: #111c30 !important;
-    border: 1px solid #1e3a5f !important;
-    color: #94a3b8 !important;
+    background: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    color: #475569 !important;
     border-radius: 10px !important;
     transition: all 0.2s ease !important;
 }
 
 [data-testid="stButton"] button:hover {
-    background: #1e3a5f !important;
-    color: #38bdf8 !important;
-    border-color: #38bdf8 !important;
+    background: #eff6ff !important;
+    color: #2563eb !important;
+    border-color: #2563eb !important;
 }
 
-/* ── SUCCESS / INFO BOXES ── */
-[data-testid="stAlert"] {
-    border-radius: 12px !important;
-    border: none !important;
-}
-
-/* ── METRIC CARD ── */
 .metric-card {
-    background: #111c30;
+    background: #f8fafc;
     padding: 24px;
     border-radius: 16px;
-    border: 1px solid #1e3a5f;
+    border: 1px solid #e2e8f0;
     text-align: center;
-    color: white;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-    transition: transform 0.2s ease;
+    color: #1e293b;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
-.metric-card:hover {
-    transform: translateY(-2px);
-}
-
-/* ── DIVIDER ── */
 hr {
-    border-color: #1e2d45 !important;
+    border-color: #e2e8f0 !important;
     margin: 1rem 0 !important;
 }
-::-webkit-scrollbar-track { background: #f1f5f9; }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f8fafc; }
 ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #2563eb; }
+
 </style>
 """, unsafe_allow_html=True)
+   
 
 # =========================================================
 # HEADER
@@ -808,15 +773,19 @@ Limited matching context found.
             # DISPLAY AI RESPONSE
             # =========================================================
             with chat_container:
-                with st.chat_message("assistant"):
-                    placeholder = st.empty()
-                    out = ""
-                    for word in final_answer.split():
-                        out += word + " "
-                        time.sleep(0.002)
-                        placeholder.markdown(out + "▌", unsafe_allow_html=False)
-                    placeholder.markdown(out, unsafe_allow_html=False)
-           
+                placeholder = st.empty()
+                out = ""
+                for word in final_answer.split():
+                    out += word + " "
+                    time.sleep(0.002)
+                    placeholder.markdown(
+                        f"<div class='chat-ai'>🤖 {out}▌</div>",
+                        unsafe_allow_html=True
+                    )
+                placeholder.markdown(
+                    f"<div class='chat-ai'>🤖 {out}</div>",
+                    unsafe_allow_html=True
+                )
 
             # =========================================================
             # SAVE CHAT
