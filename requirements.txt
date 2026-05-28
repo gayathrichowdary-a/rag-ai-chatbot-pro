@@ -1,0 +1,13 @@
+streamlit
+python-dotenv
+numpy
+langchain
+langchain-community
+langchain-groq
+sentence-transformers
+faiss-cpu
+pymupdf
+streamlit-pdf-viewer
+rank-bm25
+torch
+transformers
