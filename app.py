@@ -10,7 +10,7 @@ from langchain_community.document_loaders import PyMuPDFLoader
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain_community.retrievers import BM25Retriever
-from langchain.schema import Document
+from langchain_core.documents import Document
 from sentence_transformers import CrossEncoder
 from langchain_groq import ChatGroq
 from langchain.text_splitter import RecursiveCharacterTextSplitter
