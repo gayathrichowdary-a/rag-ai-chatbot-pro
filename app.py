@@ -2,6 +2,7 @@ import streamlit as st
 import time
 import tempfile
 import os
+import re
 from dotenv import load_dotenv
 from collections import defaultdict
 import numpy as np
@@ -117,6 +118,13 @@ html, body, [class*="css"]{
     text-align:center;
     color:white;
 }
+  .main {
+    background-color: #0b1120 !important;
+}
+
+[data-testid="stAppViewContainer"] {
+    background-color: #0b1120 !important;
+}          
 
 </style>
 """, unsafe_allow_html=True)
@@ -382,17 +390,12 @@ if uploaded_files:
 
     bm25.k = 12
 
-    from langchain.retrievers import MergerRetriever
-
     st.session_state.retriever = MergerRetriever(
     retrievers=[faiss, bm25]
 )
 
     st.success(f"✅ Loaded Successfully: {len(chunks)} chunks")
 
-# =========================================================
-# CHAT TAB
-# =========================================================
 # =========================================================
 # CHAT TAB
 # =========================================================
@@ -665,6 +668,8 @@ STRICT RULES:
                 response = llm.invoke(prompt)
 
                 answer = response.content
+            answer = re.sub(r'<[^>]+>', '', answer)  # strip any HTML tags
+    
 
             # =========================================================
             # CONFIDENCE SCORE
@@ -709,24 +714,16 @@ Limited matching context found.
             # =========================================================
             # DISPLAY AI RESPONSE
             # =========================================================
-
             with chat_container:
-
                 with st.chat_message("assistant"):
-
                     placeholder = st.empty()
-
                     out = ""
-
                     for word in final_answer.split():
-
                         out += word + " "
-
                         time.sleep(0.002)
-
-                        placeholder.markdown(out + "▌")
-
-                    placeholder.markdown(out)
+                        placeholder.markdown(out + "▌", unsafe_allow_html=False)
+                    placeholder.markdown(out, unsafe_allow_html=False)
+           
 
             # =========================================================
             # SAVE CHAT
