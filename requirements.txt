@@ -2,6 +2,8 @@ streamlit==1.37.1
 
 langchain==0.1.20
 langchain-community==0.0.38
+langchain-groq
+langchain-huggingface
 
 sentence-transformers
 faiss-cpu
@@ -11,3 +13,6 @@ numpy
 rank-bm25
 scikit-learn
 streamlit-pdf-viewer
+transformers
+torch
+groq
