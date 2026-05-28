@@ -1,7 +1,8 @@
 streamlit
-langchain
-langchain-community
+langchain>=0.2.16
+langchain-community>=0.2.16
 langchain-groq
+langchain-huggingface
 sentence-transformers
 faiss-cpu
 pymupdf
@@ -12,4 +13,3 @@ rank-bm25
 torch
 transformers
 scikit-learn
-langchain-huggingface
