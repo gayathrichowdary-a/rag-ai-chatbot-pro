@@ -15,6 +15,7 @@ from sentence_transformers import CrossEncoder
 from langchain_groq import ChatGroq
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.retrievers import MergerRetriever
+from langchain.schema import Document
 
 from streamlit_pdf_viewer import pdf_viewer
 
