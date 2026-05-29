@@ -1,4 +1,3 @@
-# rag-ai-chatbot-pro
 
 # 🚀 RAG AI Chatbot Pro
 
