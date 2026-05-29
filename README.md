@@ -53,7 +53,7 @@ Production-Level Multi PDF AI Assistant powered by RAG (Retrieval-Augmented Gene
 
 ## 🏠 Home Page
 
-![Home](assets/home.pngg.png)
+![Home](screenshots/home.png)
 
 ---
 
