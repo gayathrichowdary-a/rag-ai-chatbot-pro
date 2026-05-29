@@ -54,25 +54,25 @@ Production-Level Multi PDF AI Assistant powered by RAG (Retrieval-Augmented Gene
 
 ## 🏠 Home Page
 
-![Home](assets/home.png)
+![Home](assets/home.pngg.png)
 
 ---
 
 ## 📂 PDF Upload System
 
-![Upload](assets/upload.png)
+![Upload](assets/upload.pngg.png)
 
 ---
 
 ## 💬 AI Chat System
 
-![Chat](assets/chat.png)
+![Chat](assets/chat.pngg.png)
 
 ---
 
 ## 📊 Analytics Dashboard
 
-![Analytics](assets/analytics.png)
+![Analytics](assets/analytics.pngg.png)
 
 ---
 
